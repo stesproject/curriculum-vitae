@@ -118,4 +118,24 @@ Instead of editing raw HTML tags across multiple files:
 - **Strict 2-Page Layout**:
   - Each `.page` container is fixed to `210mm` $\times$ `297mm` (A4).
   - Page breaks (`page-break-after: always; break-after: page;`) ensure clean pagination without spilling onto unintended pages.
-# curriculum-vitae
+
+---
+
+## 📦 Automated GitHub Releases
+
+This repository includes a GitHub Actions workflow ([`.github/workflows/release.yml`](.github/workflows/release.yml)) that automatically builds the project, compiles the 3 PDFs with headless Chrome, and attaches them as release assets.
+
+### Option 1: Via Git Tag
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+GitHub Actions will automatically create release `v1.0.0` and attach all 3 PDFs.
+
+### Option 2: Via GitHub UI
+1. Go to **Releases** > **Draft a new release**.
+2. Select or create a tag (e.g., `v1.0.0`), give it a title, and click **Publish release**.
+3. The workflow triggers, builds the PDFs in the cloud, and attaches them to the release.
+
+### Option 3: Manual Trigger
+Go to **Actions** > **Release CV PDFs** > **Run workflow**.

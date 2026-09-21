@@ -61,10 +61,14 @@ fi
 CHROME_BIN=""
 if [ -f "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" ]; then
   CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+elif command -v google-chrome-stable >/dev/null 2>&1; then
+  CHROME_BIN="google-chrome-stable"
 elif command -v google-chrome >/dev/null 2>&1; then
   CHROME_BIN="google-chrome"
 elif command -v chromium >/dev/null 2>&1; then
   CHROME_BIN="chromium"
+elif command -v chromium-browser >/dev/null 2>&1; then
+  CHROME_BIN="chromium-browser"
 fi
 
 if [ -z "$CHROME_BIN" ]; then
@@ -79,6 +83,7 @@ echo "Target: $OUTPUT_FILE"
 
 "$CHROME_BIN" \
   --headless=new \
+  --no-sandbox \
   --disable-gpu \
   --allow-file-access-from-files \
   --enable-local-file-accesses \
