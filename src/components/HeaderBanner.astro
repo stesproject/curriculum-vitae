@@ -1,0 +1,14 @@
+---
+interface Props {
+  firstName: string;
+  lastName: string;
+  title: string;
+}
+
+const { firstName, lastName, title } = Astro.props;
+---
+
+<header class="header-banner">
+  <h1><strong>{firstName}</strong> {lastName}</h1>
+  <div class="header-subtitle">{title}</div>
+</header>

@@ -1,0 +1,36 @@
+---
+import type { TimelineEntry } from '../types/cv';
+
+interface Props {
+  entry: TimelineEntry;
+}
+
+const { entry } = Astro.props;
+---
+
+<div class="timeline-item">
+  <div class="timeline-period">{entry.period}</div>
+  <div class="timeline-content">
+    <div class="timeline-role">{entry.role}</div>
+    <div class="timeline-company-row">
+      <span class="timeline-company">{entry.company}</span> · 
+      <span class="timeline-location">
+        {entry.location}
+        <svg class="pin-icon" viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      </span>
+    </div>
+    {entry.subtitle && <div class="timeline-subtitle">{entry.subtitle}</div>}
+    {
+      (entry.description || (entry.bullets && entry.bullets.length > 0)) && (
+        <div class="timeline-details">
+          {entry.description && <div set:html={entry.description} />}
+          {entry.bullets && entry.bullets.map((bullet) => (
+            <div class="timeline-bullet" set:html={bullet} />
+          ))}
+        </div>
+      )
+    }
+  </div>
+</div>

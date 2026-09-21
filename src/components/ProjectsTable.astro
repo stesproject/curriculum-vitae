@@ -1,0 +1,22 @@
+---
+import type { ProjectEntry } from '../types/cv';
+
+interface Props {
+  items: ProjectEntry[];
+}
+
+const { items } = Astro.props;
+---
+
+<table class="projects-table">
+  <tbody>
+    {
+      items.map((item) => (
+        <tr>
+          <td class="project-name">{item.name}</td>
+          <td set:html={item.description} />
+        </tr>
+      ))
+    }
+  </tbody>
+</table>

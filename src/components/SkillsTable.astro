@@ -1,0 +1,22 @@
+---
+import type { SkillCategory } from '../types/cv';
+
+interface Props {
+  items: SkillCategory[];
+}
+
+const { items } = Astro.props;
+---
+
+<table class="skills-table">
+  <tbody>
+    {
+      items.map((item) => (
+        <tr>
+          <td class="skill-category">{item.category}</td>
+          <td>{item.list}</td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>

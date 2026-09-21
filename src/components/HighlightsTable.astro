@@ -1,0 +1,22 @@
+---
+import type { HighlightItem } from '../types/cv';
+
+interface Props {
+  items: HighlightItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<table class="highlights-table">
+  <tbody>
+    {
+      items.map((item) => (
+        <tr>
+          <td class="hl-label">{item.label}</td>
+          <td set:html={item.text} />
+        </tr>
+      ))
+    }
+  </tbody>
+</table>

@@ -1,0 +1,131 @@
+---
+import type { CVData } from '../types/cv';
+import ScreenActions from '../components/ScreenActions.astro';
+import HeaderBanner from '../components/HeaderBanner.astro';
+import Sidebar from '../components/Sidebar.astro';
+import Section from '../components/Section.astro';
+import HighlightsTable from '../components/HighlightsTable.astro';
+import SkillsTable from '../components/SkillsTable.astro';
+import TimelineItem from '../components/TimelineItem.astro';
+import ProjectsTable from '../components/ProjectsTable.astro';
+import PageFooter from '../components/PageFooter.astro';
+
+interface Props {
+  data: CVData;
+}
+
+const { data } = Astro.props;
+const fullName = `${data.personalInfo.firstName} ${data.personalInfo.lastName}`;
+---
+
+<!DOCTYPE html>
+<html lang={data.lang}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{data.pageTitle}</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Screen Actions Bar (hidden when printing or exporting PDF) -->
+  <ScreenActions
+    currentLang={data.lang}
+    printButtonText={data.printButtonText}
+  />
+
+  <div class="page-container">
+
+    <!-- ================= PAGE 1 ================= -->
+    <div class="page page-1">
+      <!-- Top Banner -->
+      <HeaderBanner
+        firstName={data.personalInfo.firstName}
+        lastName={data.personalInfo.lastName}
+        title={data.personalInfo.title}
+      />
+
+      <!-- 2-Column Content -->
+      <div class="page-body">
+        <!-- Left Column: Sidebar -->
+        <Sidebar
+          personalInfo={data.personalInfo}
+          sidebar={data.sidebar}
+        />
+
+        <!-- Right Column: Main Content -->
+        <main class="main-content">
+          <!-- Highlights -->
+          <Section title={data.highlights.title}>
+            <HighlightsTable items={data.highlights.items} />
+          </Section>
+
+          <!-- Technical Skills -->
+          <Section title={data.technicalSkills.title}>
+            <SkillsTable items={data.technicalSkills.items} />
+          </Section>
+
+          <!-- Work Experience -->
+          <Section title={data.workExperience.title}>
+            <div class="timeline-list">
+              {data.workExperience.items.map((entry) => (
+                <TimelineItem entry={entry} />
+              ))}
+            </div>
+          </Section>
+        </main>
+      </div>
+
+      <!-- Page 1 Footer -->
+      <PageFooter
+        fullName={fullName}
+        email={data.personalInfo.email}
+        phone={data.personalInfo.phone}
+      />
+    </div>
+
+    <!-- ================= PAGE 2 ================= -->
+    <div class="page page-2">
+      <div class="page-body">
+        <!-- Empty Sidebar to match alignment -->
+        <Sidebar empty={true} />
+
+        <!-- Right Column: Main Content -->
+        <main class="main-content">
+          <!-- Education -->
+          <Section title={data.education.title}>
+            <div class="timeline-list">
+              {data.education.items.map((entry) => (
+                <TimelineItem entry={entry} />
+              ))}
+            </div>
+          </Section>
+
+          <!-- Professional Development -->
+          <Section title={data.professionalDevelopment.title}>
+            <div class="timeline-list">
+              {data.professionalDevelopment.items.map((entry) => (
+                <TimelineItem entry={entry} />
+              ))}
+            </div>
+          </Section>
+
+          <!-- Selected Personal Projects -->
+          <Section title={data.personalProjects.title}>
+            <ProjectsTable items={data.personalProjects.items} />
+          </Section>
+        </main>
+      </div>
+
+      <!-- Page 2 Footer -->
+      <PageFooter
+        fullName={fullName}
+        email={data.personalInfo.email}
+        phone={data.personalInfo.phone}
+      />
+    </div>
+
+  </div>
+
+</body>
+</html>

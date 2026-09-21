@@ -1,0 +1,28 @@
+{
+  "name": "cv-stefano-soft-eng",
+  "version": "1.0.0",
+  "description": "Stefano Mercadante Software Engineer CV - HTML & CSS Edition",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "export:pdf": "npm run build && ./export-pdf.sh en",
+    "export:pdf:de": "npm run build && ./export-pdf.sh de",
+    "export:pdf:it": "npm run build && ./export-pdf.sh it",
+    "export:pdf:all": "npm run build && ./export-pdf.sh all"
+  },
+  "keywords": [
+    "cv",
+    "resume",
+    "html",
+    "css",
+    "pdf"
+  ],
+  "author": "Stefano Mercadante",
+  "license": "MIT",
+  "devDependencies": {
+    "astro": "^7.3.3",
+    "typescript": "^7.0.2"
+  }
+}
