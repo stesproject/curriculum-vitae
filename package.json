@@ -1,6 +1,6 @@
 {
   "name": "cv-stefano-soft-eng",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stefano Mercadante Software Engineer CV - HTML & CSS Edition",
   "scripts": {
     "dev": "astro dev",
