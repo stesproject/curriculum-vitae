@@ -2,13 +2,13 @@ import type { CVData } from '../types/cv';
 
 export const cvIt: CVData = {
   lang: 'it',
-  pageTitle: 'Stefano Mercadante - Curriculum Vitae (Software Engineer)',
+  pageTitle: 'Stefano Mercadante - Curriculum Vitae',
   printButtonText: 'Stampa / Salva in PDF',
 
   personalInfo: {
     firstName: 'Stefano',
     lastName: 'Mercadante',
-    title: 'Software Engineer | React, TypeScript, Node.js, Azure',
+    title: 'Full-Stack Software Engineer',
     birthDate: '10/05/1992',
     location: 'Domiciliato a Monaco di Baviera, Germania',
     email: 'stefmercadante@gmail.com',
@@ -35,7 +35,7 @@ export const cvIt: CVData = {
     languages: [
       { name: 'Italiano', level: 'Madrelingua' },
       { name: 'Inglese', level: 'C1' },
-      { name: 'Tedesco', level: 'A2' },
+      { name: 'Tedesco', level: 'B1' },
     ],
     interestsTitle: 'Interessi',
     interests: 'Programmazione, IT, Gaming, Yoga, Lettura, Disegno, Progetti Open Source',
@@ -46,11 +46,15 @@ export const cvIt: CVData = {
     items: [
       {
         label: 'Profilo',
-        text: '8 anni di esperienza nello sviluppo di software enterprise per settori bancario, assicurativo, retail, energia e gestione flotte.',
+        text: '8 anni di esperienza nello sviluppo di software enterprise per settori automotive, bancario, assicurativo, retail, energia e gestione flotte.',
       },
       {
         label: 'Focus',
-        text: 'Specialista React e TypeScript con solide competenze in Node.js, .NET, API REST, Azure, Docker, CI/CD e testing.',
+        text: 'Ingegnere full-stack a 360 gradi: solida competenza sia front-end che back-end, con capacità di progettare, sviluppare e rilasciare in produzione soluzioni enterprise scalabili e manutenibili.',
+      },
+      {
+        label: 'Formazione',
+        text: 'Studente in Ingegneria Informatica (curriculum Intelligenza Artificiale) per consolidare competenze avanzate in machine learning e AI a supporto della pratica enterprise.',
       },
     ],
   },
@@ -58,15 +62,14 @@ export const cvIt: CVData = {
   technicalSkills: {
     title: 'Competenze tecniche',
     items: [
-      { category: 'Linguaggi', list: 'TypeScript, JavaScript, C#, HTML5, CSS3, SQL' },
-      { category: 'Frontend', list: 'React, Angular, Next.js, Vite, Tailwind, TanStack Query, AG Grid' },
+      { category: 'Linguaggi', list: 'TypeScript, JavaScript, Java, C#, SQL' },
+      { category: 'Frontend', list: 'React, Angular, Next.js, Vite, Tailwind, TanStack' },
       { category: 'Backend', list: 'Node.js, Express, .NET, REST APIs, MongoDB' },
-      { category: 'Architettura', list: 'Architettura a componenti, gestione dello stato, autenticazione, i18n' },
       { category: 'Cloud & DevOps', list: 'Azure, Docker, GitHub Actions, CI/CD' },
       { category: 'Testing', list: 'Jest, Jasmine, Karma, ESLint, Prettier' },
       { category: 'Mobile & Desktop', list: 'React Native, Expo, Electron' },
       { category: 'Game Dev', list: 'Godot, Unity' },
-      { category: 'Strumenti', list: 'Git, Jira, Trello, Expo, Electron, metodologie Agile' },
+      { category: 'Strumenti', list: 'Git, Jira, Trello, Expo, Electron' },
     ],
   },
 
@@ -135,6 +138,18 @@ export const cvIt: CVData = {
     title: 'Istruzione e Formazione',
     items: [
       {
+        period: '2026–in corso',
+        role: 'Laurea in Ingegneria Informatica - Curriculum Intelligenza Artificiale',
+        company: 'Università degli Studi Guglielmo Marconi',
+        location: 'Italia (Online)',
+        description: 'Corso di laurea universitario a distanza intrapreso in parallelo all\'attività lavorativa nell\'ottica di formazione continua, per consolidare e ampliare le competenze ingegneristiche avanzate.',
+        bullets: [
+          'Percorso telematico/part-time flessibile, perfettamente compatibile con l\'attività professionale a tempo pieno.',
+          'Focus disciplinare su architettura degli elaboratori, algoritmi, probabilità e statistica, Machine Learning, Deep Learning e sistemi intelligenti distribuiti.',
+          'Approfondimento dell\'ingegneria del software applicata all\'integrazione di modelli di IA in sistemi complessi e scalabili.',
+        ],
+      },
+      {
         period: '2016–2017',
         role: 'Digital Business Transformation (Intensivo di 1 anno)',
         company: 'Google & Camera di Commercio Italiana',
@@ -166,7 +181,7 @@ export const cvIt: CVData = {
   },
 
   professionalDevelopment: {
-    title: 'Formazione continua',
+    title: 'Certificazioni',
     items: [
       {
         period: '2025',
@@ -199,26 +214,30 @@ export const cvIt: CVData = {
   },
 
   personalProjects: {
-    title: 'Progetti personali selezioni',
+    title: 'Progetti personali',
     items: [
       {
         name: 'To-Do Blocks',
+        url: 'https://play.google.com/store/apps/details?id=com.stesproject.todoblocks',
         description: 'App Android in <strong>React Native</strong> pubblicata su Google Play Store per la pianificazione delle attività e workflow di produttività a blocchi.',
       },
       {
         name: 'Choralith Audio Explorer',
+        url: 'https://github.com/stesproject/choralith-audio-explorer',
         description: 'Applicazione desktop cross-platform in <strong>React + Electron</strong> per la gestione e l\'esplorazione di librerie audio.',
       },
       {
-        name: 'Text Game',
-        description: 'Piattaforma di narrazione interattiva in <strong>React + Firebase + API OpenAI</strong> con conversazioni basate su IA e cloud hosting.',
+        name: 'RPG Weaver',
+        url: 'https://rpg-weaver.web.app/',
+        description: 'Game engine e map editor 2D web-based con <strong>TypeScript, React, PixiJS (WebGL) e Zustand/IndexedDB</strong>, dotato di editor multi-layer e visual scripting per eventi interattivi in-browser.',
       },
       {
-        name: 'App Ristoranti',
-        description: 'App Android & iOS in <strong>React Native</strong> per i ristoranti per promuovere l\'attività, mostrare i menu e gestire le prenotazioni.',
+        name: 'Comanda Next',
+        description: 'Sistema POS & KDS local-first in produzione realizzato con <strong>React, Fastify, SQLite (WAL) e WebSocket</strong> per la gestione in tempo reale di comande, monitor cucina/bar, cassa e scarico magazzino con distinta base.',
       },
       {
         name: 'Alchemy Pot',
+        url: 'https://alchemy-pot.web.app/',
         description: 'Piattaforma web in <strong>React + Astro</strong> per la pubblicazione di giochi, risorse e progetti software indipendenti.',
       },
     ],

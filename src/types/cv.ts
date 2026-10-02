@@ -31,6 +31,7 @@ export interface TimelineEntry {
 export interface ProjectEntry {
   name: string;
   description: string;
+  url?: string;
 }
 
 export interface CVData {

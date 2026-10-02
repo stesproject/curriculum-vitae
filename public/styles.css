@@ -452,6 +452,19 @@ html, body {
   white-space: nowrap;
 }
 
+.projects-table .project-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(126, 143, 150, 0.6);
+  text-underline-offset: 2px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.projects-table .project-link:hover {
+  color: #1e293b;
+  text-decoration-color: #1e293b;
+}
+
 /* Page Footer */
 .page-footer {
   margin-top: auto;

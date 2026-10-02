@@ -2,13 +2,13 @@ import type { CVData } from '../types/cv';
 
 export const cvDe: CVData = {
   lang: 'de',
-  pageTitle: 'Stefano Mercadante - Lebenslauf (Softwareentwickler)',
+  pageTitle: 'Stefano Mercadante - Lebenslauf',
   printButtonText: 'Drucken / Als PDF speichern',
 
   personalInfo: {
     firstName: 'Stefano',
     lastName: 'Mercadante',
-    title: 'Softwareentwickler | React, TypeScript, Node.js, Azure',
+    title: 'Full-Stack Software Engineer',
     birthDate: '10/05/1992',
     location: 'Wohnhaft in München, Deutschland',
     email: 'stefmercadante@gmail.com',
@@ -35,7 +35,7 @@ export const cvDe: CVData = {
     languages: [
       { name: 'Italienisch', level: 'Muttersprache' },
       { name: 'Englisch', level: 'C1' },
-      { name: 'Deutsch', level: 'A2' },
+      { name: 'Deutsch', level: 'B1' },
     ],
     interestsTitle: 'Interessen',
     interests: 'Coding, IT, Gaming, Yoga, Lesen, Zeichnen, Open-Source-Projekte',
@@ -46,11 +46,15 @@ export const cvDe: CVData = {
     items: [
       {
         label: 'Profil',
-        text: '8 Jahre Erfahrung in der Entwicklung von Enterprise-Software für Bankwesen, Versicherungen, Retail, Energie und Flottenmanagement.',
+        text: '8 Jahre Erfahrung in der Entwicklung von Enterprise-Software für Automotive, Bankwesen, Versicherungen, Retail, Energie und Flottenmanagement.',
       },
       {
         label: 'Fokus',
-        text: 'React- und TypeScript-Spezialist mit Node.js, .NET, REST APIs, Azure, Docker, CI/CD und Testing.',
+        text: 'Ganzheitlicher Full-Stack Engineer: fundierte Expertise im Frontend sowie im Backend mit Fokus auf Konzeption, Entwicklung und produktivem Deployment skalierbarer, wartbarer Enterprise-Lösungen.',
+      },
+      {
+        label: 'Studium',
+        text: 'Fernstudium in Computer Engineering (Schwerpunkt KI) zur Vertiefung fundierter Grundlagen in Machine Learning und KI.',
       },
     ],
   },
@@ -58,15 +62,14 @@ export const cvDe: CVData = {
   technicalSkills: {
     title: 'Technische Fähigkeiten',
     items: [
-      { category: 'Programmiersprachen', list: 'TypeScript, JavaScript, C#, HTML5, CSS3, SQL' },
-      { category: 'Frontend', list: 'React, Angular, Next.js, Vite, Tailwind, TanStack Query, AG Grid' },
+      { category: 'Programmiersprachen', list: 'TypeScript, JavaScript, Java, C#, SQL' },
+      { category: 'Frontend', list: 'React, Angular, Next.js, Vite, Tailwind, TanStack' },
       { category: 'Backend', list: 'Node.js, Express, .NET, REST APIs, MongoDB' },
-      { category: 'Architektur', list: 'Komponentenarchitektur, State Management, Authentifizierung, i18n' },
       { category: 'Cloud & DevOps', list: 'Azure, Docker, GitHub Actions, CI/CD' },
       { category: 'Testing', list: 'Jest, Jasmine, Karma, ESLint, Prettier' },
       { category: 'Mobile & Desktop', list: 'React Native, Expo, Electron' },
       { category: 'Spieleentwicklung', list: 'Godot, Unity' },
-      { category: 'Tools', list: 'Git, Jira, Trello, Expo, Electron, agile Umsetzung' },
+      { category: 'Tools', list: 'Git, Jira, Trello, Expo, Electron' },
     ],
   },
 
@@ -134,6 +137,18 @@ export const cvDe: CVData = {
   education: {
     title: 'Ausbildung',
     items: [
+      {
+        period: '2026–laufend',
+        role: 'B.Sc. Technische Informatik / Computer Engineering - Schwerpunkt KI',
+        company: 'Università degli Studi Guglielmo Marconi',
+        location: 'Italien (Online)',
+        description: 'Berufsbegleitendes universitäres Fernstudium im Rahmen kontinuierlicher Weiterbildung, um fundierte ingenieurwissenschaftliche Kompetenzen zu vertiefen und auszubauen.',
+        bullets: [
+          'Flexibles Fernstudienformat, vollständig vereinbar mit einer Vollzeitberufstätigkeit.',
+          'Schwerpunkte in Rechnerarchitektur, Algorithmen, Wahrscheinlichkeitsrechnung & Statistik, Machine Learning, Deep Learning und verteilten intelligenten Systemen.',
+          'Praxisorientierter Fokus auf Software Engineering zur Integration intelligenter Modelle in skalierbare Produktionsumgebungen.',
+        ],
+      },
       {
         period: '2016–2017',
         role: 'Digitale Unternehmenstransformation (1-jähriges Intensivprogramm)',
@@ -203,22 +218,26 @@ export const cvDe: CVData = {
     items: [
       {
         name: 'To-Do Blocks',
+        url: 'https://play.google.com/store/apps/details?id=com.stesproject.todoblocks',
         description: '<strong>React-Native</strong>-Android-App, veröffentlicht im Google Play Store, für Aufgabenplanung und blockbasierte Produktivitäts-Workflows.',
       },
       {
         name: 'Choralith Audio Explorer',
+        url: 'https://github.com/stesproject/choralith-audio-explorer',
         description: '<strong>React + Electron</strong>-Desktopanwendung für mehrere Plattformen zur Verwaltung und Exploration von Audio-Bibliotheken.',
       },
       {
-        name: 'Text Game',
-        description: '<strong>React + Firebase + OpenAI APIs</strong>-Plattform für interaktives Storytelling mit KI-gestützten Gesprächen und Cloud Hosting.',
+        name: 'RPG Weaver',
+        url: 'https://rpg-weaver.web.app/',
+        description: 'Webbasierte 2D-Game-Engine und Map-Editor mit <strong>TypeScript, React, PixiJS (WebGL) und Zustand/IndexedDB</strong>, inklusive Multilayer-Tile-Editor und In-Browser Visual Scripting.',
       },
       {
-        name: 'Altro?',
-        description: '<strong>React-Native</strong>-Android- und iOS-App für Restaurants, um ihr Geschäft zu präsentieren, Menüs zu zeigen und Reservierungen zu verwalten.',
+        name: 'Comanda Next',
+        description: 'Produktiv eingesetztes Local-First POS- & KDS-System mit <strong>React, Fastify, SQLite (WAL) und WebSockets</strong> für Echtzeit-Bestellabwicklung, Küchen-/Bar-Monitore, Abrechnung und stücklistenbasierte Lagerverwaltung.',
       },
       {
         name: 'Alchemy Pot',
+        url: 'https://alchemy-pot.web.app/',
         description: '<strong>React + Astro</strong>-Webplattform zur Veröffentlichung von Games, Ressourcen und unabhängigen Softwareprojekten.',
       },
     ],

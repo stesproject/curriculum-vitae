@@ -2,13 +2,13 @@ import type { CVData } from '../types/cv';
 
 export const cvEn: CVData = {
   lang: 'en',
-  pageTitle: 'Stefano Mercadante - Software Engineer CV',
+  pageTitle: 'Stefano Mercadante - CV',
   printButtonText: 'Print / Save as PDF',
 
   personalInfo: {
     firstName: 'Stefano',
     lastName: 'Mercadante',
-    title: 'Software Engineer | React, TypeScript, Node.js, Azure',
+    title: 'Full-Stack Software Engineer',
     birthDate: '10/05/1992',
     location: 'Based in Munich, Germany',
     email: 'stefmercadante@gmail.com',
@@ -35,7 +35,7 @@ export const cvEn: CVData = {
     languages: [
       { name: 'Italian', level: 'Native' },
       { name: 'English', level: 'C1' },
-      { name: 'German', level: 'A2' },
+      { name: 'German', level: 'B1' },
     ],
     interestsTitle: 'Interests',
     interests: 'Coding, IT, Gaming, Yoga, Reading, Drawing, Open Source Projects',
@@ -46,11 +46,15 @@ export const cvEn: CVData = {
     items: [
       {
         label: 'Profile',
-        text: '8 years delivering enterprise software for banking, insurance, retail, energy and fleet management.',
+        text: '8 years delivering enterprise software for automotive, banking, insurance, retail, energy and fleet management.',
       },
       {
-        label: 'Core',
-        text: 'React and TypeScript specialist with Node.js, .NET, REST APIs, Azure, Docker, CI/CD and testing.',
+        label: 'Focus',
+        text: 'End-to-end full-stack engineer: strong expertise across both front-end and back-end, designing, building, and deploying scalable, maintainable enterprise solutions to production.',
+      },
+      {
+        label: 'Education',
+        text: 'Pursuing a degree in Computer Engineering (AI track) to complement enterprise experience with solid machine learning foundations.',
       },
     ],
   },
@@ -58,15 +62,14 @@ export const cvEn: CVData = {
   technicalSkills: {
     title: 'Technical skills',
     items: [
-      { category: 'Languages', list: 'TypeScript, JavaScript, C#, HTML5, CSS3, SQL' },
-      { category: 'Frontend', list: 'React, Angular, Next.js, Vite, Tailwind, TanStack Query, AG Grid' },
+      { category: 'Languages', list: 'TypeScript, JavaScript, Java, C#, SQL' },
+      { category: 'Frontend', list: 'React, Angular, Next.js, Vite, Tailwind, TanStack' },
       { category: 'Backend', list: 'Node.js, Express, .NET, REST APIs, MongoDB' },
-      { category: 'Architecture', list: 'Component architecture, state management, authentication, i18n' },
       { category: 'Cloud & DevOps', list: 'Azure, Docker, GitHub Actions, CI/CD' },
       { category: 'Testing', list: 'Jest, Jasmine, Karma, ESLint, Prettier' },
       { category: 'Mobile & Desktop', list: 'React Native, Expo, Electron' },
       { category: 'Game Dev', list: 'Godot, Unity' },
-      { category: 'Tools', list: 'Git, Jira, Trello, Expo, Electron, Agile delivery' },
+      { category: 'Tools', list: 'Git, Jira, Trello, Expo, Electron' },
     ],
   },
 
@@ -134,6 +137,18 @@ export const cvEn: CVData = {
   education: {
     title: 'Education',
     items: [
+      {
+        period: '2026–present',
+        role: 'Bachelor in Computer Engineering - Artificial Intelligence Track',
+        company: 'Università degli Studi Guglielmo Marconi',
+        location: 'Italy (Online)',
+        description: 'Distance-learning university degree program pursued alongside full-time work as part of continuous professional development, consolidating and expanding advanced AI engineering skills.',
+        bullets: [
+          'Flexible distance-learning format fully compatible with ongoing full-time professional commitments.',
+          'Core curriculum covering computer systems architecture, algorithms, probability & statistics, Machine Learning, Deep Learning, and distributed intelligent systems.',
+          'Applied focus on software engineering for integrating AI and ML models into reliable, production-grade applications.',
+        ],
+      },
       {
         period: '2016–2017',
         role: 'Digital Business Transformation (1-year intensive)',
@@ -203,22 +218,26 @@ export const cvEn: CVData = {
     items: [
       {
         name: 'To-Do Blocks',
+        url: 'https://play.google.com/store/apps/details?id=com.stesproject.todoblocks',
         description: '<strong>React Native</strong> Android app published on Google Play Store for task planning and block-based productivity workflows.',
       },
       {
         name: 'Choralith Audio Explorer',
+        url: 'https://github.com/stesproject/choralith-audio-explorer',
         description: '<strong>React + Electron</strong> cross-platform desktop application for managing and exploring audio libraries.',
       },
       {
-        name: 'Text Game',
-        description: '<strong>React + Firebase + OpenAI APIs</strong> interactive storytelling platform with AI-powered conversations and cloud hosting.',
+        name: 'RPG Weaver',
+        url: 'https://rpg-weaver.web.app/',
+        description: 'Web-based 2D game engine and map editor built with <strong>TypeScript, React, PixiJS (WebGL), and Zustand/IndexedDB</strong>, featuring a multi-layer tile editor and in-browser visual scripting engine.',
       },
       {
-        name: 'Altro?',
-        description: '<strong>React Native</strong> Android & iOS app for restaurants to promote their business, showcase menus and manage reservations.',
+        name: 'Comanda Next',
+        description: 'Production-deployed local-first POS & KDS system built with <strong>React, Fastify, SQLite (WAL), and WebSockets</strong> for real-time order routing, kitchen/bar displays, billing, and BOM-based inventory deduction.',
       },
       {
         name: 'Alchemy Pot',
+        url: 'https://alchemy-pot.web.app/',
         description: '<strong>React + Astro</strong> web platform for publishing games, resources and independent software projects.',
       },
     ],
